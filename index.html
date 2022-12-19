@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../../CSS/style_teacher_home.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Rubik+Vinyl&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <title>MRU Assignment Box</title>
+    <link rel="icon" type="image/x-icon" href="Assignment1.jpg">
+
+    <link rel="shortcut icon" href="../../Images/Webpage_Icons/Private_School.ico" type="image/x-icon">
+    <style>
+     @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+     @import url('https://fonts.googleapis.com/css2?family=Rubik+Vinyl&display=swap');
+     .head1 {
+        font-family: 'Rubik Vinyl', cursive;
+     }
+     .head2{
+        font-family: 'Lobster', cursive;
+
+     }
+        body{margin: 10;}
+
+        ul{
+            list-style-type: none;
+            margin: 0;
+            padding:0;
+            overflow: hidden;
+            background-color: #dddddd;
+            position: sticky;
+            top: 0;
+            width: 100%;
+        }
+        li{
+            float: left;
+            border-right: 1px solid #bbb;
+            background-color: rgb(11, 96, 243);
+            color:black;
+        }
+        li a {
+            display: block;
+            color: black;
+            text-align: center;
+            padding: 40px 40px;
+            text-decoration: none;
+            padding: 20px;
+            border-radius: 10%;
+        }
+        li a:hover{
+            background-color: rgb(244, 122, 7);
+            color: white;
+            box-shadow: 0px 8px 16px 0px rgba(228, 167, 125, 0.5);
+
+        }
+        li a:hover:not(.active){
+            background-color: #111;
+        }
+        .active{
+            background-color: green;
+        }
+        li:last-child{
+            border-left: none;
+        }
+        li a, .dropbtn{
+            display: inline-block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        .dropdown:hover .dropbtn{
+            background-color: green;
+        }
+        li.dropdown{
+            display: inline-block;
+        }
+        .dropdown-content{
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+        .dropdown-content a:hover{
+            background-color: #f1f1f1;
+        }
+
+        .dropdown:hover .dropdown-content{
+            display: block;
+        }
+        .header:hover{
+            background-color: beige;
+        }
+* {box-sizing: border-box;}
+body {font-family: Verdana, sans-serif;}
+.mySlides {display: none;}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border: 5px solid rgb(65, 64, 64);
+
+}
+img:hover {
+  /* Start the shake animation and make the animation last for 0.5 seconds */
+  animation: shake 0.5s;
+
+  /* When the animation is finished, start again */
+  animation-iteration-count: infinite;
+}
+
+@keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+.btn-secondary{
+    display: block;
+    text-decoration: none;
+    background-color: cornflowerblue;
+    color: white;
+    border-radius: 10%;
+}
+.btn-secondary a{
+    color: white;
+    text-decoration: none;
+}
+.btn-secondary:hover{
+    opacity: 0.5;
+}
+.footer {
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: red;
+   color: white;
+   text-align: center;
+}
+.footer a{
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.footer a:hover{
+  background-color: blue;
+}
+.rules{
+  background-color: forestgreen;
+  text-decoration: none;
+  text-align: center;
+  color: white;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.rules :hover{
+  background-color: aqua;
+}
+.slider {
+  width: 100%;
+  height: 100%;
+  background-color: red;
+  animation-name: example;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+
+}
+
+@keyframes example {
+  0%   {background-color: red;}
+  25%  {background-color: yellow;}
+  50%  {background-color: blue;}
+  100% {background-color: green;}
+}
+.navbar {
+  width: 100%;
+  height: 100%;
+  background-color: rgb(109, 175, 159);
+  animation-name: example1;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+
+}
+
+@keyframes example1 {
+  0%   {background-color: red;}
+  25%  {background-color: green;}
+  50%  {background-color: blue;}
+  100% {background-color: yellow;}
+}
+.keys1 {
+  width: auto;
+  height: auto;
+  background-color: red;
+  position: relative;
+  animation-name: example2;
+  animation-duration: 4s;
+}
+.keys1 a:hover{
+  width: max-content;
+
+}
+
+@keyframes example2 {
+  0%   {background-color:rgb(0, 98, 255); left:0px; top:0px;}
+  25%  {background-color:yellow; left:200px; top:0px;}
+  50%  {background-color:blue; left:200px; top:0px;}
+  75%  {background-color:green; left:0px; top:0px;}
+  100% {background-color:red; left:0px; top:0px;}
+}
+    </style>
+</head>
+<body style="background-color: cornsilk;">
+    
+    <div class="header" style="background-color:transparent" >
+        <h1 style="text-align: center;" class="head1">MALLAREDDY UNIVERSITY</h1>
+        <h1 style="text-align: center;" class="head2">Assignment Box</h1>
+    </div>
+    <div class="navbar">
+        <ul class="keys1">
+            <li title="Home"><a href="Assignment submission.html" target="_parent"> Home</a></li>
+            <li title="Personal Information"><a href="personal information.html">Personal Information</a></li>
+            <li title="Add an Assignment"><a href="Add_assignment.html">Add</a></li>
+            <li title="Edit an Assignment"><a href="Edit_assignment.html">Edit</a></li>
+            <li title="Update an Assignment"><a href="Update_assignment.html">Update</a></li>
+            <li title="Upload an Assignment"><a href="Upload.html">Upload</a></li>
+
+            <li class="dropdownContainer" title="More about us"><a href="About.html"> About Us</a></li>
+            <li class="dropdownContainer" title="Sign in" style="float: right;"><a href="Login.html" class="dropbtn">Login</a>
+                
+            <div class="dropdown-content">
+                <a href="Sign_In.html">Sign In</a>
+                <a href="Sign_Up.html">Sign Up</a>
+            </div></li>
+        </ul>
+    </div>
+    <div class="offcanvas offcanvas-start" id="demo">
+        <div class="offcanvas-header">
+          <h1 class="offcanvas-title">Visit:</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+        </div>
+        <div class="offcanvas-body">
+          <button class="btn-secondary" type="button"><a href="https://mallareddyuniversity.ac.in" target="_blank">MRUH</a></button>
+        </div>
+      </div>
+      
+      <div class="container-fluid mt-3">
+        <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#demo">
+Visit Our UNIVERSITY        </button>
+      </div>
+    <br>
+    <br>
+    <br>
+<div class="slider">
+  <marquee behavior="alternate" direction="right" style="background-color: gainsboro;color: midnightblue;">Lets Finish and Submit <b>Fast</b></marquee>
+</div>
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 3</div>
+  <img src="mru.jpeg" style="width:100%">
+  <div class="text">We The MRUH Students</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 3</div>
+  <img src="Assignment.jpg" style="width:100%">
+  <div class="text">Submit Our Assignments...</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 3</div>
+  <img src="box.jpg" style="width:100%">
+  <div class="text">Into Assignment Box...</div>
+</div>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+</div>
+    </div>
+    <script>
+let slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 2000); // Change image every 2 seconds
+}
+</script>
+<div>
+    <img src="Assign student.jpg" alt="Student" style="width: 50%;">
+    <img src="Assignment logo.jpg" alt="Submission" style="height: 40%;" width="50%">
+</div>
+
+<div class="footer">
+  <p><a href="index.html"> Be feel <b>STRESS</b> by winning a <b>RACE</b></a><a href="traffic_racer_game.html" class="rules">              Rules</a> </p>
+</div>
+</body>
+</html>

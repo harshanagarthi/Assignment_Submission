@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Information</title>
+    <link rel="icon" type="image/x-icon" href="Assignment1.jpg">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+      .mybutton button:hover{
+        opacity: 0.5;
+      }
+      .mybutton a{
+        color: white;
+        text-decoration: none;
+      }
+      .para1 input:hover{
+        opacity: 0.5;
+      }
+    </style>
+</head>
+<body style="display: block; background-color: cornsilk; align-content: center; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
+    </div>
+    <div class="Main_Container">
+      <table id="table_teacher_home" name="table_teacher_home" style="background-color: aqua; border-radius: 4%;">
+        <tr>
+          <th colspan="2"><ul><u>Personal Information</u></ul></th>
+        </tr>
+        <tr>
+          <td>Number:</td>
+          <td id="table_teacher_home_number"></td>
+        </tr>
+        <tr>
+          <td>First Name:</td>
+          <td id="table_teacher_home_first_name"></td>
+        </tr>
+        <tr>
+          <td>Last Name:</td>
+          <td id="table_teacher_home_last_name"></td>
+        </tr>
+        <tr>
+          <td>E-mai:</td>
+          <td id="table_teacher_home_email"></td>
+        </tr>
+        <tr>
+          <td>Password:</td>
+          <td id="table_teacher_home_password"></td>
+        </tr>
+        <tr>
+          <td>Subject:</td>
+          <td id="table_teacher_home_subject"></td>
+        </tr>
+        <tr>
+          <td>Desired Subject:</td>
+          <td id="table_teacher_home_desired_subject"></td>
+        </tr>
+        <tr>
+          <td>Desired Course:</td>
+          <td id="table_teacher_home_desired_course"></td>
+        </tr>
+        <tr>
+          <td>Actual Course:</td>
+          <td id="table_teacher_home_actual_course"></td>
+        </tr>
+      </table>
+      <br><br>
+      <table id="table_teacher_home_assignments" name="table_teacher_home_assignments" border="1" style="width: 100%; height: 100%;">
+        <tr>
+          <th colspan="9">Assignments</th>
+        </tr>
+        <tr>
+          <th>Number</th>
+          <th>Title</th>
+          <th>Description</th>
+          <th>Submission</th>
+          <th>Oral Mark</th>
+          <th>Total Mark</th>
+          <th>Course</th>
+          <th>Student</th>
+          <th>Edit/Update</th>
+        </tr>
+        
+      </table>
+      <br><br>
+      <div class="mybutton">
+      <button class="button_not_in_a_form" onclick="teacher_edit_personal_information_form()" style="color: white;background-color: blue;padding: 5px; margin:  10px; border-radius: 5%; border: 1px solid blue;"><a href="#edit">Edit my personal Information Show Form</a> </button>
+      <button onclick="teacher_sign_out()" class="button_not_in_a_form" style="color: white; background-color: cornflowerblue; border: 1px solid cornflowerblue; padding: 10px;margin: 0px 110px;"><a href="index.html">Sign Out</a> </button>
+      </div>
+      <br>
+      <div id="edit_personal_teacher_form_container">
+        <div class="header_form" id="edit">
+            <h1>Edit Personal Information Form</h1>
+        </div>
+        <section>
+            <form name="edit_personal_teacher_form" id="edit_personal_teacher_form" onsubmit="edit_personal_teacher()">
+                <p>
+                    First Name:
+                    <input type="text" name="first_name" id="first_name" placeholder="Input your First Name here" required>
+                </p>
+                <p>
+                    Last Name:
+                    <input type="text" name="last_name" id="last_name" placeholder="Input your Last Name here" required>
+                </p>
+                <p>
+                    E-mail:
+                    <input type="email" name="e-mail" id="e-mail" placeholder="Input your E-mail here" required>
+                </p>
+                <p>
+                    Password:
+                    <input type="password" name="password" id="password" minlength="4" placeholder="Minimum 4 characters" required>
+                </p>
+                <p class="para1">
+                  <br>
+                  <input type="button" value="Submit Personal Information" onclick="submit()" class="Submit" style="color: white;background-color: blue;padding: 5px; margin:  10px; border-radius: 5%; border: 1px solid blue;">
+                </p>
+            </form>
+        </section>
+    <script>
+      function submit(){
+        alert("Assignment Submitted Successfully");
+      }
+    </script>
+      
+</body>
+</html>

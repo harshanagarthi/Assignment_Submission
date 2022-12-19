@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="display: block; background-color: cornsilk; align-content: center; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; padding: 10px;">
+    <div class="header_form">
+        <h1>Submit an Assignment</h1>
+      </div>
+      <section>
+      <form name="add_assignment_teacher_form" id="add_assignment_teacher_form" onsubmit="add_assignment_teacher()">
+        <p>
+          Roll Number:
+          <input type="text" placeholder="Enter your Roll Number" required>
+        </p>
+        <p>
+          Title:
+          <input type="text" name="title" id="title" placeholder="Input the title of the assignment here" required>
+        </p>
+        <p>
+          Description:<br>
+          <textarea name="Description" id="Description" cols="30" rows="5">Input your description for the assignment here</textarea>
+        </p>
+        <p>
+            File: <br>
+            <input type="file" name="file" id="" placeholder="Upload File here..." required>
+
+        </p>
+        
+        
+        <p>
+          Linked Course:<br>
+          <select name="course_teacher_select_assignment" id="course_teacher_select_assignment" required>
+          <option value="" selected="selected" disabled="disabled">Select a Course</option>
+      <option value="1" title="Web Designing and Development">WDD</option>
+      <option value="2" title="Probability and Statistics">P&S</option>
+      <option value="3" title="Data Structures Using Python">DSP</option>
+      <option value="4" title="Database Management System">DBMS</option>
+      <option value="5" title="Financial Accounting and Management">FAM</option>
+      <option value="6" title="Environmental Science">EVS</option>
+      </select>
+        </p>
+        <p>
+          Linked Student:<br>
+          <select name="student_teacher_select_assignment" id="student_teacher_select_assignment" required>
+            <option value="10" selected="selected" disabled="disabled">Select a Student</option>
+                      <option value="11" title="CSE General">CSE</option>
+                      <option value="12" title="Artificial Intelligence and Machine Learning">AI & ML</option>
+                      <option value="13" title="Internet of Things">IoT</option>
+                      <option value="14" title="Information Technology">IT</option>
+                      <option value="15" title="Cyber Security">CS</option>
+                      <option value="16" title="Data Science">DS</option>
+                      <option value="17" title="Blockchain Technology">BT</option>
+          </select>
+        </p>
+        <p>
+          <br>
+          <input type="submit" value="Submit an Assignment" id="add_assignment_button" style="color: white;background-color: blue;padding: 5px; margin:  10px; border-radius: 5%; border: 1px solid blue;">
+        </p>
+</body>
+</html>

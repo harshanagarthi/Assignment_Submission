@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update an Assignment</title>
+    <link rel="icon" type="image/x-icon" href="Assignment1.jpg">
+    <style>
+      #update_assignment_button:hover{
+        opacity: 0.5;
+      }
+    </style>
+</head>
+<body style="display: block; background-color: cornsilk; align-content: center; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; padding: 10px;">
+    <div id="Update_Asignment_form_container">
+        <div class="header_form">
+          <h1>Update an Assignment</h1>
+      </div>
+      <section>
+        <form name="update_assignment_teacher_form" id="update_assignment_teacher_form" onsubmit="update_assignment_teacher()">
+          <p>
+            Number:
+            <input type="number" name="number_update" id="number_update" step=".01" placeholder="First number is for the course duplicate numbers not allowed" min="1" required>
+          </p>
+          <p>
+            Title
+            <input type="text" name="title_update" id="title_update" placeholder="Input the title of the assignment here" required>
+          </p>
+          <p>
+            Description:<br>
+            <textarea name="Description_update" id="Description_update" cols="30" rows="5">Input your description for the assignment here</textarea>
+          </p>
+          <p>
+            Submision Deadline:<br>
+            <input type="datetime-local" name="Deadline_update" id="Deadline_update" required>
+          </p>
+          <p>
+            Oral Mark:<br>
+            <input type="number" name="Oral_update" id="Oral_update" max="100" min="0" placeholder="Oral and total must add up to 100" step="1" style="width: 220px;" required>
+          </p>
+          <p>
+            Total Mark:<br>
+            <input type="number" name="Total_update" id="Total_update" max="100" min="0" placeholder="Oral and total must add up to 100" step="1" style="width: 220px;" required>
+          </p>
+          <p>
+            Linked Course:<br>
+            <select name="course_teacher_select_assignment_update" id="course_teacher_select_assignment_update" required>
+                <option value="" selected="selected" disabled="disabled">Select a Course</option>
+            <option value="1" title="Web Designing and Development">WDD</option>
+            <option value="2" title="Probability and Statistics">P&S</option>
+            <option value="3" title="Data Structures Using Python">DSP</option>
+            <option value="4" title="Database Management System">DBMS</option>
+            <option value="5" title="Financial Accounting and Management">FAM</option>
+            <option value="6" title="Environmental Science">EVS</option>
+            </select>
+          </p>
+          <p>
+            Linked Student:<br>
+            <select name="student_teacher_select_assignment_update" id="student_teacher_select_assignment_update" required>
+                <option value="10" selected="selected" disabled="disabled">Select a Student</option>
+                          <option value="11" title="CSE General">CSE</option>
+                          <option value="12" title="Artificial Intelligence and Machine Learning">AI & ML</option>
+                          <option value="13" title="Internet of Things">IoT</option>
+                          <option value="14" title="Information Technology">IT</option>
+                          <option value="15" title="Cyber Security">CS</option>
+                          <option value="16" title="Data Science">DS</option>
+                          <option value="17" title="Blockchain Technology">BT</option>
+            </select>
+          </p>
+          <p>
+            <br>
+            <input type="submit" value="Update this Assignment" id="update_assignment_button" style="color: white;background-color: blue;padding: 5px; margin:  10px; border-radius: 5%; border: 1px solid blue;">
+          </p>
+        </form>
+      </section>
+      </div>
+</body>
+</html>
